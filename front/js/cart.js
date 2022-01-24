@@ -70,9 +70,8 @@ async function loadProducts() {
 
 // Displays all the items on the cart.html page
 function addToDisplay(cartComplete) {
+    let listItems = '';
     for (let product of cartComplete){
-        let listItems = '';
-
         listItems +=
         `<article class="cart__item" data-id="${product.productId}" data-color="${product.productColor}">
         <div class="cart__item__img">
@@ -95,9 +94,8 @@ function addToDisplay(cartComplete) {
         </div>
         </div>
         </article>`;
-
-        document.querySelector("#cart__items").insertAdjacentHTML("beforeend", listItems);
     }
+    document.querySelector("#cart__items").insertAdjacentHTML("beforeend", listItems);
 }
 
 // Displays the total number of items and the total amount of the cart

@@ -17,9 +17,9 @@ function loadList() {
       }
       document.querySelector("#items").insertAdjacentHTML("beforeend", listItems);
     })
-    .catch(() => {
-      alert('Le serveur est inaccessible. Veuillez nous excuser pour la gêne occasionnée.');
-    });
+  .catch(() => {
+    alert('Le serveur est inaccessible. Veuillez nous excuser pour la gêne occasionnée.');
+  });
 };
 
 loadList();
