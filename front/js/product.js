@@ -3,7 +3,7 @@ function loadProduct() {
   // Get the id of the product from the page URL
   let idProduct = (new URL(window.location).searchParams.get("id"));
 
-  fetch("http://localhost:3000/api/products/"+idProduct)
+  fetch("https://jerome-baille-kanap.herokuapp.com/api/products/"+idProduct)
     .then((response) => response.json())
     .then((data) => {
         console.log(data);

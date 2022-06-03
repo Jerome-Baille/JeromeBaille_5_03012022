@@ -1,13 +1,13 @@
 // Load and display all the products on the index page
 function loadList() {
-  fetch("http://localhost:3000/api/products")
+  fetch("https://jerome-baille-kanap.herokuapp.com/api/products")
   .then((response) => response.json())
   .then((data) => {
       let listItems = '';
       
       for (let obj of data){
         listItems += 
-        `<a href="./product.html?id=${obj._id}">
+        `<a href="html/product.html?id=${obj._id}">
           <article>
             <img src="${obj.imageUrl}" alt="${obj.altTxt}">
             <h3 class="productName">${obj.name}</h3>
