@@ -48,7 +48,7 @@ checkLocation();
 // Matches the items in local storage with the API and concatenates the results
 async function loadProducts() {
     let result = 
-        await fetch('https://jerome-baille-kanap.herokuapp.com/api/products')
+        await fetch('https://backend-kanap.onrender.com/api/products')
             .then((response) => {return response})
             .catch(()=> {
                 alert('Le serveur est inaccessible. Veuillez nous excuser pour la gêne occasionnée.');
@@ -215,7 +215,7 @@ function postForm() {
         }
 
         if (orderForm.checkValidity()) {
-            fetch(`https://jerome-baille-kanap.herokuapp.com/api/products/order`, {
+            fetch(`https://backend-kanap.onrender.com/api/products/order`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

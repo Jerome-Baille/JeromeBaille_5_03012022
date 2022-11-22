@@ -1,6 +1,6 @@
 // Load and display all the products on the index page
 function loadList() {
-  fetch("https://jerome-baille-kanap.herokuapp.com/api/products")
+  fetch("https://backend-kanap.onrender.com/api/products")
   .then((response) => response.json())
   .then((data) => {
       let listItems = '';
